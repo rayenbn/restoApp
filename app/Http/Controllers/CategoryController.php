@@ -60,7 +60,6 @@ class CategoryController extends Controller
         $category->id = $request->input('category_id');
         $category->category_name = $request->input('category_name');
         $category->order = $request->input('order');
-
         if($category->save()){
             return new CategoryResource($category);
         }
